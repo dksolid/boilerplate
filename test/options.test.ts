@@ -1,10 +1,10 @@
-import { describe, it } from 'node:test';
-import * as assert from 'node:assert/strict';
+import { expect } from 'chai';
 
 import { fnAny } from '../src/index.js';
 
-void describe('Sample test', async () => {
-  await it('function does not throw errors', () => {
-    assert.doesNotThrow(() => fnAny());
+describe('Sample test', () => {
+  test('function does not throw errors', () => {
+    expect(() => fnAny()).to.not.throw();
+    expect(fnAny()).to.eq('test 111');
   });
 });

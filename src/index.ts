@@ -1,3 +1,1 @@
-export const fnAny = () => {
-  return 'test';
-};
+export { fnAny } from './fnAny.js';
